@@ -85,14 +85,3 @@ Contributions are welcome! Please open an issue or submit a pull request to cont
 ## License
 
 This project is licensed under the [ISC License](LICENSE).
-
-## Contact
-
-For any questions or feedback, please contact:
-
-- **Michael Orji**  
-  Email: [orjimichael4886@gmail.com](mailto:orjimichael4886@gmail.com)
-
----
-
-Feel free to adjust any sections according to your specific project needs and updates.
