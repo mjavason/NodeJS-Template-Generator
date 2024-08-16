@@ -1,0 +1,26 @@
+{
+  "name": "js-template-generator",
+  "version": "1.0.0",
+  "description": "CLI tool for generating Node.js and TypeScript project templates.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "generate-js-template": "index.js"
+  },
+  "keywords": [
+    "cli",
+    "template",
+    "nodejs",
+    "typescript",
+    "generator",
+    "project"
+  ],
+  "author": "Michael Orji <orjimichael4886@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
