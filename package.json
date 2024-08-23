@@ -1,6 +1,6 @@
 {
   "name": "js-template-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool for generating Node.js and TypeScript project templates.",
   "main": "index.js",
   "scripts": {
