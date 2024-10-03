@@ -28,12 +28,23 @@ Replace `typescript-sfa` with the desired template name. The tool will create a 
 
 ## Available Templates
 
-- **`typescript-sfa`**: This is a single-file TypeScript template app for faster idea testing and prototyping. It includes:
+- **`express-sfa`**: (Express.js single file app) This is a single-file TypeScript template app for faster idea testing and prototyping. It includes:
   - Tests
   - Swagger documentation
   - A demo root API call
   - Basic async error handling
   - A demo Axios call
+  - `.env` support
+
+  - **`nest-sta`**: (Nest.js startup template app) 'Quick generic template for spinning up Nest.js apps. Designed to help you bootstrap your next Nest.js project efficiently:
+  - Cookie Auth
+  - Swagger documentation
+  - validation
+  - logging
+  - Mongoose ORM
+  - File Handling
+  - Emails
+  - Caching
   - `.env` support
 
 ## Adding New Templates

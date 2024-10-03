@@ -6,8 +6,10 @@ const path = require('path');
 
 // Define available templates
 const templates = {
-  'typescript-sfa':
+  'ts-sfa':
     'This is a single file TypeScript template app for faster idea testing and prototyping. It contains tests, swagger documentation, one demo root API call, basic async error handling, one demo axios call, and .env support.',
+  'nest-sta':
+    'Quick generic template for spinning up Nest.js apps. Supports cookie authentication, Swagger documentation, validation, logging, Mongoose ORM, environment variables, file handling, emails, caching, and more. Built for flexibility and scalability, this template is designed to help you bootstrap your next Nest.js project efficiently.',
   // Add more templates here as you create them
 };
 
