@@ -36,7 +36,7 @@ Replace `typescript-sfa` with the desired template name. The tool will create a 
   - A demo Axios call
   - `.env` support
 
-  - **`nest-sta`**: (Nest.js startup template app) 'Quick generic template for spinning up Nest.js apps. Designed to help you bootstrap your next Nest.js project efficiently:
+- **`nest-sta`**: (Nest.js startup template app) 'Quick generic template for spinning up Nest.js apps. Designed to help you bootstrap your next Nest.js project efficiently:
   - Cookie Auth
   - Swagger documentation
   - validation
