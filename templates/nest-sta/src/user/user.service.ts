@@ -3,8 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User } from './user.schema';
 import { GenericService } from '../common/providers/generic.service'; // Import the GenericService
-import { IUserDocument } from './user.interface';
-import { UpdateUserDTO } from './dto/update-user.dto';
+import { IUser, IUserDocument } from './user.interface';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { MailService } from 'src/mail/mail.service';
@@ -20,7 +19,7 @@ export class UserService extends GenericService<IUserDocument> {
     super(userModel); // Pass the model to the GenericService constructor
   }
 
-  async updateProfile(id: string, updates: UpdateUserDTO) {
+  async updateProfile(id: string, updates: Partial<IUser>) {
     const data = await this.update(id, updates);
 
     if (updates.email || updates.password) {
@@ -29,7 +28,7 @@ export class UserService extends GenericService<IUserDocument> {
       });
       const mailSent = await this.mailService.sendMailVerificationEmail(
         data.email,
-        `${data.firstName} ${data.lastName}`,
+        `${data.fullName}`,
         `${this.config.get('app.baseURL')}/${this.config.get('app.apiPrefix')}/auth/verify-email/${verificationToken}`,
       );
       if (!mailSent) {

@@ -1,10 +1,12 @@
+import { Bucket } from './bucket.schema';
+import { cloudinaryInstance } from 'src/common/configs/cloudinary.config';
+import { GenericService } from '../common/providers/generic.service';
+import { IBucketDocument } from './bucket.interface';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Bucket } from './bucket.schema';
-import { GenericService } from '../common/providers/generic.service'; // Import the GenericService
-import { IBucketDocument } from './bucket.interface';
-import { cloudinaryInstance } from 'src/common/configs';
+import { APP_NAME } from 'src/common/configs/constants';
+// Import the GenericService
 
 @Injectable()
 export class BucketService extends GenericService<IBucketDocument> {
@@ -12,9 +14,9 @@ export class BucketService extends GenericService<IBucketDocument> {
     super(bucketModel); // Pass the model to the GenericService constructor
   }
 
-  async uploadToCloudinary(path: string, folder: string = 'Uploads', author: string = '001x') {
+  async uploadToCloudinary(path: string, folder: string = 'global', author: string = '001x') {
     const imageUpload = await cloudinaryInstance.uploader.upload(path, {
-      folder,
+      folder: `${APP_NAME}/${folder}`,
       // resource_type: 'raw',
     });
 
